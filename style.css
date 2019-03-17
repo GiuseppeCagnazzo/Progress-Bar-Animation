@@ -1,0 +1,71 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url("img/fall-autumn-red-season.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+
+}
+
+.wrapper {
+    width: 800px;
+    background: #fff;
+    margin: 10% auto;
+    position: relative;
+    padding: 15px 30px;
+    border-radius: 50px;
+    box-sizing: border-box;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+.progress {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    height: 20px;
+    background: #f2f2f2;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 50px;
+
+}
+
+.progress::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 0;
+    height: 100%;
+    border-radius: 50px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+    animation: bar-animation infinite 5s;
+
+
+}
+
+@keyframes bar-animation {
+    0% {
+        width: 0;
+        background: red;
+    }
+
+    25% {
+        width: 25%;
+        background: green;
+    }
+
+    50% {
+        width: 50%;
+        background: blue;
+    }
+
+    75% {
+        width: 75%;
+        background: tomato;
+    }
+
+    100% {
+        width: 100%;
+        background: magenta;
+    }
+}
